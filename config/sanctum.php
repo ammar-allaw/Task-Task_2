@@ -46,8 +46,8 @@ return [
     |
     */
 
-    'expiration' => 1,
-    'refresh_expiration'=>5,
+    'expiration' => 5,
+    'refresh_expiration'=>10,
 
     /*
     |--------------------------------------------------------------------------

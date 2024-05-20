@@ -15,13 +15,12 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->integer('phone_number');
+            $table->string('phone_number');
             $table->string('username');
             $table->string('image');
             $table->string('certificate');
             $table->string('password');
-            $table->string('password_confirmation');
-            $table->string('email_verification_otp')->nullable();
+            $table->char('email_verification_otp',6)->nullable();
             $table->timestamp('otp_verification_at')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();

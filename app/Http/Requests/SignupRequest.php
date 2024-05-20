@@ -32,8 +32,8 @@ class SignupRequest extends FormRequest
             ],
             'phone_number'=>['required','regex:/^09[0-9]{8}$/','unique:users,phone_number,except,id'],
             'username'=>['required','string','unique:users,username,except,id'],
-            'image'=>['required','image'],
-            'certificate'=>['required','file'],
+            'image'=>['required','image','unique:users,image,except,id'],
+            'certificate'=>['required','file','unique:users,certificate,except,id'],
             'password'=>['required','string','min:8'],
             'password_confirmation'=>['required','string','min:8'],
         ];
